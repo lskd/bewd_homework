@@ -17,6 +17,7 @@ puts "Here's the leap years out of the dates #{start_year}, and #{end_year}."
 year = start_year
 
 #while (year == [start_year..end_year]) do # this range doesn't work
+# (start_year..end_year).each do |year|  # no while loop for this to work
 #while (year <= end_year) do # from solution
 while year.between?(start_year, end_year) do # this between works
   if year % 4 == 0 && year % 100 != 0
