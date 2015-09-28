@@ -1,4 +1,4 @@
-# Remind Snape to check for ron, harry, hermione
+# Remind Teacher to check for the hogs & wortzy
 # at the beginning allow snape to add another classmate
 #
 #
@@ -26,7 +26,7 @@
 
 
 # puts "We're going to check that our attendance is present"
-# students = ["Harry", "Ron", "Hermione"]
+# students = ["Hog", "Hog 2", "Wortzy"]
 # student_present = []
 #
 # students.each do |peepz|
@@ -41,25 +41,30 @@
 # end
 #
 
+students3 = ["Hog", "Hog 2", "Wortzy"]
+counter = 3
+counter2 = counter
 
-students3 = ["Harry", "Hermione", "Ron"]
 puts "We're going see if the 3 of you, #{students3[0]}, #{students3[1]}, #{students3[2]} are present."
 puts "First, is there any new students?"
 response = gets.chomp.strip.downcase
-if response == "yes"
-    puts "Please type your name"
-    students3 << gets.chomp.strip.downcase.capitalize
-    puts "Added #{students3[3]} to the roster for today."
-end
+
+  if response == "yes"
+      puts "Please type your name"
+      students3 << gets.chomp.strip.downcase.capitalize
+      puts "Added #{students3[3]} to the roster for today."
+      counter += 1
+  end
 
 students3.each do | present_check |
   puts "Are you here today #{present_check} ?"
-
   present_response = gets.chomp.strip.downcase
-  if present_response == "yes"
-        puts "Check, next is.. "  # fix this part
-  end
 
+  if present_response == "yes"
+        if counter2 < counter
+          puts "Check, next is.. "  # last puts adjusted
+        end
+  end
 end
 
 
@@ -76,21 +81,21 @@ end
 #     students2 << gets.chomp.strip.downcase.capitalize
 #     puts "Added #{students2[0]} to the roster for today."
 # end
-# puts "Ok, is Harry here today?"
+# puts "Ok, is the Hog here today?"
 # present_response = gets.chomp.strip.downcase
 # if present_response == "yes"
 #   puts "Check, next is "
 #   students2 << "Harry"
 # end
 #
-# puts "Ron, are you here today?"
+# puts "Wortzy, are you here today?"
 # present_response = gets.chomp.strip.downcase
 # if present_response == "yes"
 #   puts "Check "
 #   students2 << "Ron"
 # end
 #
-# puts "Is Hermione here today?"
+# puts "Is Hog 2 here today?"
 # present_response = gets.chomp.strip.downcase
 # if present_response == "yes"
 #   puts "Ok, that's it for today"
@@ -103,7 +108,7 @@ end
 #
 # students=[]
 #
-# puts "Hello Professor Snape! Would you like to add students to your checklist
+# puts "Hello Professor! Would you like to add students to your checklist
 # today? Please answer [Y/N]"
 # answer=gets.chomp.to_s.upcase
 #
