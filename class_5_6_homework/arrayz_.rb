@@ -72,7 +72,7 @@
 # cars3 = []
 #
 # puts "Type in a car"
-# cars3 << gets.chomp
+# cars3 << gets.chomp.strip.downcase
 #
 # puts "Type in another car"
 # cars3 << gets.chomp

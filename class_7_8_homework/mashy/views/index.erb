@@ -1,0 +1,47 @@
+<hr>
+<h2><i> Mashy <small>values</small></i></h2>
+<hr>
+<hr>
+
+<h2><i>lolz <small>on the line</small></i></h2>
+
+<ul>
+  <% @articles['new'].each do |arti| %>
+    <hr><li>New : <%= arti['title'] %></li>
+        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+  <% end %>
+  <hr>
+  <% @articles['hot'].each do |arti| %>
+    <hr><li>Hot : <%= arti['title'] %></li>
+        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+  <% end %>
+  <hr>
+  <% @articles['rising'].each do |arti| %>
+    <hr><li>Up Coming : <%= arti['title'] %></li>
+        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @articles['new'].each do |arti| %>
+    <li><%= "#{arti['title']} by: #{arti['author']}"%><br>
+      Other usefull stuff:<br>
+      <%= arti['link'] %>
+      <img src="<%= arti['image'] %>" width="150px" />
+    </li>
+  <% end %>
+</ul>
+
+
+
+<%#= @articles["new"][1]["title"] %>
+
+
+
+<!-- <ul>
+  <% @articles["new"].each do |arti| %>
+    <hr><a href=""><li><%= arti['title'] %></li>
+    <li><%= arti['author'] %></li>
+  <% end %>
+</ul>
+</h4> -->
