@@ -1,43 +1,72 @@
 <hr>
-<h2><i> Mashy <small>values</small></i></h2>
+    <h2><i> Mashy <small>values</small></i></h2>
 <hr>
 <hr>
-
-<h2><i>lolz <small>on the line</small></i></h2>
+    <h2><i>lolz <small>on the line</small></i></h2>
 
 <ul>
-  <% @articles['new'].each do |arti| %>
+  <!-- <% @articles['new'].each do |arti| %>
     <hr><li>New : <%= arti['title'] %></li>
-        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
+  <% end %> -->
+  <hr>
+  <% @articles['new'].each do |arti| %>
+    <hr>
+        <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
+      <li><i>The</i> New : <small><%= arti['channel'] %> </small>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
+      <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
+
   <% end %>
+
   <hr>
   <% @articles['hot'].each do |arti| %>
-    <hr><li>Hot : <%= arti['title'] %></li>
-        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+    <hr>
+        <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
+      <li>Hotness 'n Effect : <small><%= arti['channel'] %> </small>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
+      <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
+
   <% end %>
   <hr>
   <% @articles['rising'].each do |arti| %>
-    <hr><li>Up Coming : <%= arti['title'] %></li>
-        <li><small>By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['link']%>" target="_blank"><small>Check it</small></a></i></li>
+    <hr>
+      <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
+
+      <li>Up 'n Coming : <small><%= arti['channel'] %> </small>
+        <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
+
+      <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
+
   <% end %>
 </ul>
 
-<ul>
+<!-- <ul>
   <% @articles['new'].each do |arti| %>
-    <li><%= "#{arti['title']} by: #{arti['author']}"%><br>
-      Other usefull stuff:<br>
-      <%= arti['link'] %>
-      <img src="<%= arti['image'] %>" width="150px" />
+    <li>New : <%= "#{arti['title']} by: #{arti['author']}"%><br>
+      stuff: <img src="<%= arti['image'] %>" width="150px" />
     </li>
   <% end %>
-</ul>
+</ul> -->
 
-
+<style>
+a:link    {color:black; background-color:transparent; text-decoration:none}
+a:visited {color:pink; background-color:transparent; text-decoration:none}
+a:hover   {color:blue; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+</style>
 
 <%#= @articles["new"][1]["title"] %>
+<!--
+  <% @articles['new'].each do |arti| %>
+    <li>New : <%= "#{arti['title']} by: #{arti['author']}"%><br>
+      stuff: <img src="<%= arti['image'] %>" width="150px" />
+    </li>
+  <% end %> -->
 
-
-
+<!-- <li>
+<%#= arti['post_date'] %></li><li>
+<%#= arti['post_date_rfc'] %></li><li>
+<%#= arti['id'] %></li><li>
+<%#= arti['short_url'] %></li> -->
 <!-- <ul>
   <% @articles["new"].each do |arti| %>
     <hr><a href=""><li><%= arti['title'] %></li>
