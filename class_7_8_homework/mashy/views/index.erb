@@ -13,7 +13,7 @@
   <% @articles['new'].each do |arti| %>
     <hr>
         <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
-      <li><i>The</i> New : <small><%= arti['channel'] %> </small>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
+      <li><i>The</i> New : <span style="color: gray;"><small><%= arti['channel'] %> </small></span>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
       <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
 
   <% end %>
@@ -22,7 +22,7 @@
   <% @articles['hot'].each do |arti| %>
     <hr>
         <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
-      <li>Hotness 'n Effect : <small><%= arti['channel'] %> </small>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
+      <li>Hotness 'n Effect : <span style="color: gray;"><small><%= arti['channel'] %> </small></span>  <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
       <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
 
   <% end %>
@@ -31,7 +31,7 @@
     <hr>
       <a href="<%= arti['short_url']%>" target="_blank"><img align="right" src="<%= arti['image'] %>" width="100px" /></a>
 
-      <li>Up 'n Coming : <small><%= arti['channel'] %> </small>
+      <li>Up 'n Coming : <span style="color: gray;"><small><%= arti['channel'] %> </small></span>
         <center><a href="<%= arti['short_url']%>" target="_blank"><b> <%= arti['title'] %></b></a></center></li>
 
       <li><small>Pressed On <small><%= arti['post_date_rfc'] %></small></small> - <small> By</small> : <i><%= arti['author'] %> :: <a href="<%= arti['short_url']%>" target="_blank"><small>Check it</small></a></i></li>
