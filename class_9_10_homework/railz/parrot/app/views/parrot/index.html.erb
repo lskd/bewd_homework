@@ -1,0 +1,35 @@
+
+<% if @txt.present? %>
+    <h3>This is it : <%= @txt %></h3>
+    <hr>
+  <% end %>
+
+<hr>
+<h2>Indexing the Page.. </h2>
+<br>
+
+
+<hr>
+<p> Echo submission formz
+
+<%= form_tag("/parrot", method: "get") do %>
+  <%= label_tag(:txt, "Say :") %>
+  <%= text_field_tag(:txt) %>
+  <%= submit_tag("Echo Me Now") %>
+<% end %>
+<hr><hr>
+
+<%= form_tag("/monkey", method: "get") do %>
+  <%= label_tag(:monkey, "Bananas :") %>
+  <%= text_field_tag(:monkey) %>
+  <%= submit_tag("ooo ooo") %>
+<% end %>
+
+<br>
+<br>
+<i>
+  <center>
+    <p><small>Find me in app/views/parrot/index.html.erb</small></p>
+  </center>
+</i>
+<hr><hr>
