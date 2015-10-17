@@ -1,0 +1,13 @@
+<hr>
+<hr>
+<h3><center><i> Welcome to the HTS system login </i></center><h3>
+<br>
+<hr>
+<br>
+
+
+<%= form_tag('/pages/login', method: 'post') do %>
+  <%= label_tag(:code, "Access Code :") %>
+  <%= text_field_tag(:code) %>
+  <%= submit_tag(" Verify ") %>
+<% end %>
