@@ -1,0 +1,20 @@
+<hr><hr>
+<h1><i>Ingredient Inventory </i>  </h1>  <hr>
+
+<ul>
+  <% @ingredients.each do |item| %>
+    <li>
+      <h3 class="<%= "grn" if item.qty <= 5 %>">
+        <i>
+          <%= item.name %>  </i>  <br>  </h3>
+    Quantity : <%= item.qty %>  </li>  <br>
+    Units : <%= item.units %>
+    <hr>
+  <% end %>
+</ul>
+
+  <hr>
+   <ul><a href="/"> Salad </a>  </ul>
+<hr>  <hr>
+<!-- <%#= @ingredients.inspect %> -->
+        <!-- <%#= item.qty %> -->

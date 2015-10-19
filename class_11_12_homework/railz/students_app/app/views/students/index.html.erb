@@ -1,0 +1,13 @@
+<hr>
+<hr>
+<h3>Listing Students</h3>
+<hr>
+<hr><br>
+<ul>
+<% @students.each do |student| %>
+<li><%= student.name %></li>
+  <u>Email :<%= student.email %></u>
+  <br><i>Ice Cream: <%= student.ice_cream %></i><hr>
+<% end %>
+</ul>
+<hr><hr>
