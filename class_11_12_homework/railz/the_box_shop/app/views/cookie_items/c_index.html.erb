@@ -1,0 +1,26 @@
+<hr><hr>
+    <h3><i><center>The Box Shop</center></h3>
+<hr>
+<small><small> Restock items in Orange, Fast sell items in Green </i></small></small>
+<br>
+<!-- Looking at the data in the object : debugging -->
+<%#= @cookie_items.inspect %>
+
+<ul>
+  <% @cookie_items.each do | c_item | %>
+<!-- Not sure why the second h3 if tag overwrites the prevous one : lookup -->
+  <h3 class="<%= "grn" if c_item.qty >= 14 %>">
+  <h3 class="<%= "org" if c_item.qty <= 3 %>">
+<!-- Not sure why the second h3 if tag overwrites the prevous one : lookup -->
+    <li><%=c_item.name %></li></h3>
+    <i> : Size <%= c_item.size %>
+      : Units <%= c_item.units %>
+      : Qty <%= c_item.qty %>
+    </i><hr>
+  <% end %>
+</ul>
+<hr>
+<ul>
+  <li> <a href="/"> Return </a></li>
+</ul>
+<hr><hr>

@@ -1,0 +1,2 @@
+module CookieItemsHelper
+end
