@@ -1,0 +1,21 @@
+<br><hr><hr>
+<h2><center><i> Vintage Candy Cars </i></center></h2>
+<hr>
+
+<ul>
+<% @vintagecc.each do |vincar| %>
+<li><h3><%= vincar.name %><h3></li>
+<ul>: Make ˚<%= vincar.make %></ul>
+<ul>: Model ˚<%= vincar.model %></ul>
+<ul>: Year ˚<%= vincar.year %></ul>
+<ul>: Color ˚<%= vincar.color %></ul>
+<ul>: Nickname ˚<i><%= vincar.nickname %></i></ul>
+<hr>
+<% end %>
+
+</ul>
+
+<!-- <%#= @vintagecc.inspect %>  debug line-->
+<hr>
+<ul><li> <a href="/"> Gallery of Sweets</a> </li></ul>
+<hr><hr>

@@ -1,0 +1,21 @@
+<br><hr><hr>
+<h2><center><i> Modern Candy Cars </i></center></h2>
+<hr>
+
+<ul>
+<% @moderncc.each do |modcar| %>
+<li><h3><%= modcar.name %><h3></li>
+<ul>: Make ˚<%= modcar.make %></ul>
+<ul>: Model ˚<%= modcar.model %></ul>
+<ul>: Year ˚<%= modcar.year %></ul>
+<ul>: Color ˚<%= modcar.color %></ul>
+<ul>: Nickname ˚<i><%= modcar.nickname %></i></ul>
+<hr>
+<% end %>
+
+</ul>
+
+<!-- <%#= @moderncc.inspect %>  debug line-->
+<hr>
+<ul><li> <a href="/"> Gallery of Sweets</a> </li></ul>
+<hr><hr>

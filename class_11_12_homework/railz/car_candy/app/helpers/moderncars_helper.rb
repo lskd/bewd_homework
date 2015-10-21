@@ -1,0 +1,2 @@
+module ModerncarsHelper
+end
