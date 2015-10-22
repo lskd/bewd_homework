@@ -3,28 +3,25 @@ class PagesController < ApplicationController
   end
 
   def login
+  end
+
+# Auth logic check establishes the condtion to the redirect_to
+  def login_check
     @passcode = "3369"
     @code = params[:code]
 
     ## When uncommented the logic routes to failed_login
-    # if @code == @passcode    ## routes fail when uncommented
-    #   redirect_to :controller => 'pages', :action => 'successful_login'
-    # else
-    #   redirect_to :controller => 'pages', :action => 'failed_login'
-    # end
+    if @code == @passcode    ## routes fail when uncommented
+      redirect_to :controller => 'pages', :action => 'successful_login'
+     else
+       redirect_to :controller => 'pages', :action => 'failed_login'
+    end
   end
 
   def successful_login
-    #  if @code == @passcode    ## Doesn't catch the logic like
-    #    redirect_to :controller => 'pages', :action => 'successful_login'
-    #  end
-
   end
 
   def failed_login
-    # if @code != @passcode    ## Doesn't catch the logic like
-    #   redirect_to :controller => 'pages', :action => 'successful_login'
-    # end
-
   end
+
 end

@@ -1,13 +1,13 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
 
   root 'pages#index'
   get 'pages/index'
 
   get '/pages/login' => 'pages#login'
-  post '/pages/login' => 'pages#login' # dono
-
+  post '/pages/login_check' => 'pages#login_check' #Auth check to that action
+  # Also see the from type of submission and it's route that links here
+  
   get '/pages/successful_login' => 'pages#successful_login'
-
   get '/pages/failed_login' => 'pages#failed_login'
 
 

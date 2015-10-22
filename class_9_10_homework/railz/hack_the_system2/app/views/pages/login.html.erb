@@ -5,8 +5,8 @@
 <hr>
 <br>
 
-
-<%= form_tag('/pages/login', method: 'post') do %>
+<!-- Sending to logic_check route for that action withing the pages controller -->
+<%= form_tag('/pages/login_check', method: 'post') do %>
   <%= label_tag(:code, "Access Code :") %>
   <%= text_field_tag(:code) %>
   <%= submit_tag(" Verify ") %>
