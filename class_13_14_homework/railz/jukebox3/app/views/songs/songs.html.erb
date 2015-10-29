@@ -1,0 +1,10 @@
+<i><h3>All Songs, 2 ears</h3></i>
+
+
+
+<ul>
+<% @songs.each do |s| %>
+  <li><%= s.title %> by <em><%= s.artist %></em> <small><%= s.year %> | <%= s.time %></small></li><hr>
+<% end %>
+</ul>
+<i><a href="/">return</a></i>

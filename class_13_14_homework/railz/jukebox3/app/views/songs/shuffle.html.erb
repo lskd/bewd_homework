@@ -1,0 +1,10 @@
+<h3>Shuffled Yo!</h3>
+
+
+
+<ol>
+<% @songs.each do |s| %>
+  <li><%= s.title %> by <em><%= s.artist %></em> <small><%= s.year %> | <%= s.time %></small></li><hr>
+<% end %>
+</ol>
+<i><a href="/">Back</a></i>
