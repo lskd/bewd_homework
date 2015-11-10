@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
-  resources :actors
 
-  resources :theaters
+  get 'motd/cool' => 'motd#cool'
+  get 'motd/sweet' => 'motd#sweet'
+  get 'motd/magical' => 'motd#magical'
 
-  resources :movies
+  get '/cool' => 'motd#cool'
+  get '/sweet' => 'motd#sweet'
+  get '/magical' => 'motd#magical'
 
-  resources :directors
+  root to: 'motd#cool'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

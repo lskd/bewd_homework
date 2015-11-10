@@ -9,6 +9,14 @@
   <strong>Year:</strong>
   <%= @director.year %>
 </p>
+<p>
+<strong> Movies :</strong>
+<%=  @movie.directors.each do | dir| %>
+  <%= dir.name %>
+  <%= end %>
+  <%#= @movies.where(director_id: params[director.id] %>
 
-<%= link_to 'Edit', edit_director_path(@director) %> |
+</p>
+
+<%= link_to 'Edit', edit_director_path(@director) %>
 <%= link_to 'Back', directors_path %>
