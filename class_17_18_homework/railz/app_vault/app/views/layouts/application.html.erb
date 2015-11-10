@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppVault</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+  <!-- # Adding lines here -->
+  <br><hr>
+  <% if current_client %>
+    Logged In as <%= current_client.name %> | <%= link_to "Log me Out", '/logout' %>
+  <% else %>
+     <%= link_to "Sign Up", '/signup' %> | <%= link_to 'Log In', '/login' %>
+  <% end %>
+  <hr><hr>
+</body>
+</html>

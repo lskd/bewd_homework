@@ -1,0 +1,15 @@
+<!-- app/views/clients/new.html.erb -->
+<hr><hr>
+<h3> Sign Up </h3>
+<hr>
+<center>
+  <%= form_for :client, url: '/clients' do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Email: <%= f.text_field :email %><br>
+  Password to Match: <%= f.password_field :password %><br>
+  Password to Match: <%= f.password_field :password_confirmation %><br>
+  <%= f.submit "Sign Me Up!" %>
+  <% end %>
+</center>
+<br>
+<hr><hr>
