@@ -1,0 +1,13 @@
+<!-- app/views/users/new.html.erb -->
+<!-- signup form  -->
+<br><hr><hr>
+<h3><center>Sign Up!</center></h3>
+<hr><br><center>
+<%= form_for :user, url: '/users' do |f| %>
+    Name:      <%= f.text_field :name %><p>
+    Email:     <%= f.text_field :email %><p>
+    Password:  <%= f.password_field :password %><p>
+    Confirm Password: <%= f.password_field :password_confirmation %><p>
+      <%= f.submit "Sign Up!" %>
+<% end %></center>
+<br><hr><hr>
