@@ -12,4 +12,5 @@ class PixsController < ApplicationController
 
   def spring
   end
+
 end
