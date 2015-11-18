@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PixVault</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<br>
+<% if current_user %><br><i>
+  Signed in as : <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+<% else %>
+  <%= link_to 'Signup', '/signup' %> | <%= link_to 'Login', '/login' %>
+<% end %></i>
+
+
+</body>
+</html>
