@@ -26,12 +26,39 @@
 
  body {
   	height: 100%;
-   background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-   background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-   background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-   background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-   font-family: 'Lato', sans-serif;
+  //  background: -webkit-linear-gradient(313deg, #4CB8C4 7%, #EAECC6 100%);
+  //  background:    -moz-linear-gradient(313deg, #4CB8C4 7%, #EAECC6 100%);
+  //  background:     -ms-linear-gradient(313deg, #4CB8C4 7%, #EAECC6 100%);
+  //  background:      -o-linear-gradient(313deg, #4CB8C4 7%, #EAECC6 100%);
+  //  background:         linear-gradient(313deg, #4CB8C4 7%, #EAECC6 100%);
+
+  // background: #8b0000;
+									background: -webkit-linear-gradient( 317deg, #8b0000 18%, #ffff00 96%);
+									background:    -moz-linear-gradient( 317deg, #8b0000 18%, #ffff00 96%);
+									background:     -ms-linear-gradient( 317deg, #8b0000 18%, #ffff00 96%);
+									background:      -o-linear-gradient( 317deg, #8b0000 18%, #ffff00 96%);
+									background:         linear-gradient( 317deg, #8b0000 18%, #ffff00 96%);
+
+
+
+    // background-color:orange;
+    // background-image:
+    // radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    // radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    // radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    // radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    // background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    // background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+
+
+  //  font-family: 'Lato', sans-serif;
+  // font-family: 'Dosis', sans-serif;
+  // font-family: 'Cutive', serif;
+  font-family: 'Abel', sans-serif;
+  // font-family: 'Rokkitt', serif;
+  // font-family: 'Oswald', sans-serif;
+  // font-family: 'Armata', sans-serif;
  }
 
  .clearfix:before,
